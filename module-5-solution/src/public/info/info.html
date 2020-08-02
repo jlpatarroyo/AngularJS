@@ -1,0 +1,10 @@
+<div class="container">
+  <span ng-if="!infoCtrl.user.firstName"> Not Signed Up Yet. <a ui-sref="public.signUp">Sign up Now!</a></span>
+  <div ng-if="infoCtrl.user.firstName">
+    First Name: <b>{{infoCtrl.user.firstName}}</b> <br>
+    Last Name: <b>{{infoCtrl.user.lastName}} </b><br>
+    Email: <b>{{infoCtrl.user.email}}</b> <br>
+    Phone Number: <b>{{infoCtrl.user.phone}}</b> <br>
+    Favorite Dish: <img class="img-responsive" width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.user.favDish.short_name}}.jpg">
+  </div>
+</div>
